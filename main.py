@@ -55,7 +55,7 @@ def main():
     passs = generate_username(1)[0]
     password.send_keys(passs)
 
-    # double check that bitch
+    # double check again
     if len(text) > 1:
         check()
 
@@ -65,6 +65,7 @@ def main():
 
 
     try:
+        # wait for captcha to finish and then log the cookie - taken from stackoverflow because i got too lazy
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="FunCaptcha"]')))
         WebDriverWait(driver, 100).until_not(EC.presence_of_element_located((By.XPATH, '//*[@id="FunCaptcha"]')))
     except TimeoutException:
@@ -78,7 +79,6 @@ def main():
     driver.delete_cookie('.ROBLOSECURITY')
     driver.get('https://www.roblox.com/')
     time.sleep(1)
-    print('CREATED ACCOUNT')
     main()
 
 if __name__ == "__main__":
