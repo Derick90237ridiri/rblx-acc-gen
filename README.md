@@ -14,7 +14,7 @@ It will then log-out and make a new account
 
 # Requirements
 ```
-pip install seleniun
+pip install selenium
 pip install random_username
 pip install time
 pip install os
