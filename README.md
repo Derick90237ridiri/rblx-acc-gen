@@ -1,5 +1,7 @@
 # rblx-acc-gen
 ```
+Expect bugs ;-)
+
 Roblox account generator built in PYTHON;
 Works by using the selenium lib
 
